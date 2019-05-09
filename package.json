@@ -16,5 +16,7 @@
     "colorful"
   ],
   "author": "Akhil Sai Ram",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+  }
 }
