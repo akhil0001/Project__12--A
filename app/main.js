@@ -1,47 +1,67 @@
+//FIXME: Make me Readable
 
-var log =new Log();
+var cl = new Log();
+var counter = 0;
+var sampleJson = {
+    a:1,
+    b:2,c:3
+};
 
- var msg = "I love you 3000";
+cl.error(`Heyy I am an error with a stack trace ${new Error('I am inevitable errror')}`);
 
-log.error(msg);
+cl.warn('I am a warning also with a stack trace');
+ 
+cl.log('The value of counter',counter);
 
-log.warn(msg);
+cl.info('Also String Interpolation is ','possible','with this library');
 
-log.debug(msg);
+cl.debug(sampleJson)//this is an out of box functionality called as silent function. 
 
-log.info(msg);
+cl.success(`fetch API call is successful`);
 
-log.success(msg);
+cl.element('.centered-horizontal')();
 
-log.element('.element')();
+function dummy(x,y)
+{
+   return x+y;
+}
+cl.monitor(this,dummy);//this experimental function logs the function call with arguments' values
+dummy(1,2);
+dummy(3,4,5);
 
 var options = {
-    types:{
-        error:{
-            label: 'Module1-Fatal',
-            bgColor: '#b71c1c'
+    isProductionMode: false,
+    types: {
+        log: {
+            label: 'Module1-Log',
+            bgColor:'#880E4F'
         },
-        success:{
+        success: {
             label: 'Module1-Success',
-            bgColor:'#F9A825'
+            bgColor: '#F9A825'
         },
-        element:{
+        element: {
             label: 'Selector Element',
-            bgColor: '#4E342E'
+            bgColor: '#16a085'
         }
     }
 };
 
 //can create any number of loggers with custom configurations
 var logger = new Log(options);
+var a=1,b=2;
 
-logger.error(msg);
+logger.log('HoHoo!! I have new color and new label too!!')
 
-logger.success(msg);
+logger.debug({a,b});
 
-logger.element('.container')();
-logger.debug([1,2,'hai']);
+logger.setProductionMode(true);
 
-var logElement = log.element('div');
+logger.warn('You cannot see me because i am in production mode');
 
-logElement();
+logger.setProductionMode(false);
+
+logger.warn('I am here with new color');
+
+logger.element('p')();
+
