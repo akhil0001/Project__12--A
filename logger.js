@@ -15,7 +15,7 @@
      * Constructor to create a new log object
      * @param {obect} options the JSON which has the log level configurations 
      */
-    function Log(options) {
+    function Sherlog(options) {
 
         /**
          * helper function that merges the object B and objectA
@@ -222,6 +222,6 @@
         _init.bind(this, _options)();
 
     }
-    window.Log = Log;
+    window.Sherlog = Sherlog;
 
 })(window.console);
