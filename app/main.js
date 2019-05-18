@@ -1,6 +1,6 @@
 //FIXME: Make me Readable
 
-var cl = new Log();
+var cl = new Sherlog();
 var counter = 0;
 var sampleJson = {
     a:1,
@@ -48,7 +48,7 @@ var options = {
 };
 
 //can create any number of loggers with custom configurations
-var logger = new Log(options);
+var logger = new Sherlog(options);
 var a=1,b=2;
 
 logger.log('HoHoo!! I have new color and new label too!!')
