@@ -11,9 +11,9 @@ Unlike other logging libraries, it is not for serious logging(like server loggin
 Well as of now,these are the features
 1. Labelled logging with `info`,`log`,`warn`,`error`
 1. Preserves the line numbers unlike other libraries like debug.js etc
-2. `console.monitor`- Monitor/Watch the functions(i.e, it logs whenever a specific function is called)
-3. `console.element`- Just pass the element selector, it logs the matching elements into the console
-4. `console.debug` - prints the objects in table format
+2. `monitor`- Monitor/Watch the functions(i.e, it logs whenever a specific function is called)
+3. `element`- Just pass the element selector, it logs the matching elements into the console
+4. `debug` - prints the objects in table format
 5. Super easy API 
 and so many other out of box functionalities
 
